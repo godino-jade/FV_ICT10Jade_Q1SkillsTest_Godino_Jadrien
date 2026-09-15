@@ -23,7 +23,8 @@ def place_order(e):
 
     final_order = tax_price
 
-    display(f"Subtotal: {fixedprice}.", target="output1")
-    display(f"Tax: {tax}.", target="output1", append=True)
-    display(f"Total: {final_order}.", target="output1", append=True)
-    display("Thank you for your order at 10 JADE's Cafe!", target="output1", append=True)
+    display(f"Subtotal: ₱{fixedprice}", target="output1")
+    display(f"Tax: ₱{tax}", target="output1", append=True)
+    display(f"Total: ₱{final_order}", target="output1", append=True)
+    display("--------------------------", target="output1", append=True)
+    display("Thank you for ordering at 10 JADE's Cafe!", target="output1", append=True)

@@ -1,7 +1,7 @@
 from pyscript import document, display
 
 def place_order(e):
-    document.getElementById("output1").innerHTML = "" # clears previous result
+    document.getElementById("output1").innerHTML = " " # clears previous result
     prod1 = document.getElementById("item1") #get item 1 id
     prod2 = document.getElementById("item2") #get item 2 id
     prod3 = document.getElementById("item3") #get item 3 id
@@ -12,14 +12,18 @@ def place_order(e):
 
     size = document.querySelector("input[name='size']:checked")
     sprice = float(size.value)
-
     grandtotal = drinktotal + sprice
 
     pastries = document.getElementById("pastries")
     pastries_price = float(pastries.value)
 
-    tax = (grandtotal + pastries_price) * 0.12 # VAT OF 12%
-    tax_price = (grandtotal + pastries_price) + tax # order total + tax
+    fixedprice = grandtotal + pastries_price
+    tax = fixedprice * 0.12 # VAT OF 12%
+    tax_price = fixedprice + tax # order total + tax
 
     final_order = tax_price
-    display(f'You have a total of {final_order}', target="output1")
+
+    display(f"Subtotal: {fixedprice}.", target="output1")
+    display(f"Tax: {tax}.", target="output1", append=True)
+    display(f"Total: {final_order}.", target="output1", append=True)
+    display("Thank you for your order at 10 JADE's Cafe!", target="output1", append=True)

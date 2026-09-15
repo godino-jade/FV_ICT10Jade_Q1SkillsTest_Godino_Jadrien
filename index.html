@@ -22,72 +22,72 @@
             padding: 20px;
             margin: auto;
             margin-top: 20px;
+            width: 700px;
         }
 
+        .button {
+            background-color: rgb(15, 72, 13);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <h1>10 Jade's Coffee Shop</h1>
-            <div class="col">
+        <h1><b>10 JADE's Coffee Shop</b></h1>
+            <h2>Your Order</h2>
+            
+            <form>
+                <label for="choose"><b>Drink:</label>
+                    
                 <br>
-                <form>
-                    <label for="choose">Choose:</label>
                     
+                <input type="checkbox" id="item1" value="100">
+                <label for="item1">Americano</label>
                     <br>
-                    
-                    <input type="checkbox" id="item1" value="100">
-                    <label for="item1">Americano</label>
-                        <br>
-                    <input type="checkbox" id="item2" value="105">
-                    <label for="item2">Spanish Latte</label>
-                        <br>
-                    <input type="checkbox" id="item3" value="110">
-                    <label for="item3">Coffee Brew Malt</label>
-                        <br>
-                    <input type="checkbox" id="item4" value="120">
-                    <label for="item4">Affogato</label>
-                        <br>
-                    <input type="checkbox" id="item5" value="120">
-                    <label for="item5">Caramel Macchiato</label>
-
-                    <br><br>
-
-                    <label for="choose">Size:</label>
-                        <br>
-                    <input type="radio" id="regular" value=0 name="size" required>
-                    <label for="regular">Regular / +Php 0</label>
-                        <br>
-                    <input type="radio" id="upsize" value="30" name="size">
-                    <label for="upsize">Upsize / +Php 30</label>
-                    
-                    <br><br>
-                    
-                    <label for="options">Buy Pastries?</label>
+                <input type="checkbox" id="item2" value="105">
+                <label for="item2">Spanish Latte</label>
                     <br>
-                    <select id="pastries">
-                        <option value="0">No thanks!</option>
-                        <option value="99">Cookies</option>
-                        <option value="129">Cheesecake</option>
-                        <option value="159">Banana Bread</option>
-                    </select>
+                <input type="checkbox" id="item3" value="110">
+                <label for="item3">Coffee Brew Malt</label>
+                <br>
+                <input type="checkbox" id="item4" value="120">
+                <label for="item4">Affogato</label>
+                    <br>
+                <input type="checkbox" id="item5" value="120">
+                <label for="item5">Caramel Macchiato</label>
 
-                    <br><br><br>
+                <br><br>
 
-                    <button type="button"py-click="place_order">Show Order</button>
+                <label for="choose">Size:</label>
+                    <br>
+                <input type="radio" id="regular" value=0 name="size" required>
+                <label for="regular">Regular / +Php 0</label>
+                    <br>
+                <input type="radio" id="upsize" value="30" name="size">
+                <label for="upsize">Upsize / +Php 30</label>
+                    
+                <br><br>
                 
-                </form>
-            </div>
+                <label for="options">Buy Pastries?</label>  
+                <select id="pastries">
+                    <option value="0">No thanks!</option>
+                    <option value="99">Cookies</option>
+                    <option value="129">Cheesecake</option>
+                    <option value="159">Banana Bread</option>
+                </select>
 
-            <div class="col">
-                <div>
-                    <h2>Your Receipt:</h2>
-                    <div id="output1"></div>
-                </div>
-            </div>
-            <script type="py" src="main.py"></script>
-        </div>
+                <button type="button" class="button" py-click="place_order">ORDER NOW</button>    
+            </form>     
+
+            <br><br>
+
+            <h2>Your Receipt:</h2>
+            <div id="output1"></div>
+
+        <script type="py" src="main.py"></script>
     </div>
 </body>
 </html>

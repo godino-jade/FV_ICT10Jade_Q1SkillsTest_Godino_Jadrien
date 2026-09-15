@@ -18,7 +18,8 @@ def place_order(e):
     pastries = document.getElementById("pastries")
     pastries_price = float(pastries.value)
 
-    tax_price = grandtotal + pastries_price * 0.12
+    tax = (grandtotal + pastries_price) * 0.12 # VAT OF 12%
+    tax_price = (grandtotal + pastries_price) + tax # order total + tax
 
     final_order = tax_price
-    display(f'You have to pay a total of {final_order}', target="output1")
+    display(f'You have a total of {final_order}', target="output1")

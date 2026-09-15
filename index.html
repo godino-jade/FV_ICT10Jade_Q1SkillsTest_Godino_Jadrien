@@ -16,13 +16,22 @@
             <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
         -->
     <style>
+        body{
+            background-color: rgb(137, 137, 137);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
         .container{ 
             border-radius: 10px;
             background-color: rgb(129, 206, 129);
             padding: 20px;
             margin: auto;
-            margin-top: 20px;
+            margin-top: 9%;
             width: 700px;
+            box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.52)
         }
 
         .button {
@@ -31,61 +40,72 @@
             padding: 10px;
             cursor: pointer;
             font-weight: bold;
+            margin-left: 300px;
             }
+
+        h1, h3{
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1><b>10 JADE's Coffee Shop</b></h1>
-            <h2>Your Order</h2>
-            
+        <h1>10 JADE's Cafe</h1>
+        <h3>Your Order:</h3>
             <form>
-                <label for="choose"><b>Drink:</label>
-                    
-                <br>
-                    
-                <input type="checkbox" id="item1" value="100">
-                <label for="item1">Americano</label>
-                    <br>
-                <input type="checkbox" id="item2" value="105">
-                <label for="item2">Spanish Latte</label>
-                    <br>
-                <input type="checkbox" id="item3" value="110">
-                <label for="item3">Coffee Brew Malt</label>
-                <br>
-                <input type="checkbox" id="item4" value="120">
-                <label for="item4">Affogato</label>
-                    <br>
-                <input type="checkbox" id="item5" value="120">
-                <label for="item5">Caramel Macchiato</label>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="choose" style="font-weight: bold;">Drink:</label>
+                            
+                        <br>
+                        
+                        <input type="checkbox" id="item1" value="100">
+                        <label for="item1">Americano</label>
+                            <br>
+                        <input type="checkbox" id="item2" value="105">
+                        <label for="item2">Spanish Latte</label>
+                            <br>
+                        <input type="checkbox" id="item3" value="110">
+                        <label for="item3">Coffee Brew Malt</label>
+                            <br>
+                        <input type="checkbox" id="item4" value="120">
+                        <label for="item4">Affogato</label>
+                            <br>
+                        <input type="checkbox" id="item5" value="120">
+                        <label for="item5">Caramel Macchiato</label>
+                    </div>
 
-                <br><br>
+                    <div class="col-lg-6">
+                        <label for="choose" style="font-weight: bold;">Size:</label>
+                            <br>
+                        <input type="radio" id="regular" value=0 name="size" required>
+                        <label for="regular">Tall (+ ₱0)</label>
+                            <br>
+                        <input type="radio" id="upsize" value="30" name="size">
+                        <label for="upsize">Grande (+ ₱25)</label>
+                            <br>
+                        <input type="radio" id="upsize" value="50" name="size">
+                        <label for="upsize">Venti (+ ₱50)</label>
+                    </div>
+                </div>
 
-                <label for="choose">Size:</label>
-                    <br>
-                <input type="radio" id="regular" value=0 name="size" required>
-                <label for="regular">Regular / +Php 0</label>
-                    <br>
-                <input type="radio" id="upsize" value="30" name="size">
-                <label for="upsize">Upsize / +Php 30</label>
-                    
-                <br><br>
+                <br>
                 
-                <label for="options">Buy Pastries?</label>  
+                <label for="options">.Buy Pastries?</label>  
                 <select id="pastries">
                     <option value="0">No thanks!</option>
                     <option value="99">Cookies</option>
                     <option value="129">Cheesecake</option>
                     <option value="159">Banana Bread</option>
-                </select>
+                </select>   
 
                 <button type="button" class="button" py-click="place_order">ORDER NOW</button>    
             </form>     
 
-            <br><br>
+            <br>
 
-            <h2>Your Receipt:</h2>
-            <div id="output1"></div>
+        <h3>Your Receipt:</h3>
+        <div id="output1"></div>
 
         <script type="py" src="main.py"></script>
     </div>
